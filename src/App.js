@@ -1,11 +1,21 @@
-import FriendListItem from './components/FriendsListItem';
+import Profile from './components/Profile/Profile';
+import user from './user.json';
+import FriendListItem from './components/FriendsList/FriendsListItem';
 import friends from './friends.json';
 
 export default function App() {
   return (
-    <ul>
+    <div>
+      <Profile
+        name={user.name}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
+
       <FriendListItem friends={friends} />
-    </ul>
+    </div>
   );
 }
 
