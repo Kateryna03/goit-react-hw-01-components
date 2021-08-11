@@ -33,6 +33,6 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
-  stats: PropTypes.number.isRequired,
+  stats: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 // import user from 'путь/к/user.json;
