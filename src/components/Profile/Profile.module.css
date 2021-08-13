@@ -1,0 +1,44 @@
+.profile {
+  background-color: yellow;
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  justify-self: center;
+  margin: 0 auto;
+}
+
+.description {
+  text-align: center;
+}
+
+.avatar {
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50%;
+  border-color: grey;
+  background-color: honeydew;
+}
+
+.stats {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+
+  justify-content: space-around;
+}
+.statsItem {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 65px;
+}
+/* .statsItem:not(:last-child) {
+  border-right: 1px solid grey;
+} */
+
+.quantity {
+  text-align: center;
+  justify-content: center;
+}

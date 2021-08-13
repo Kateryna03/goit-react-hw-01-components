@@ -1,24 +1,22 @@
 import PropTypes from 'prop-types';
-
-export default function FriendList({ status, avatar, name }) {
+import styles from '../FriendsList/FriendsList.module.css';
+export default function FriendList({ isOnline, avatar, name }) {
   return (
-    <ul>
-      {/* class="friend-list"> */}
-      <li>
-        {/* class="item">
-              class="status"
-              class="avatar"
-              class="name" */}
-        <span>{status ? 'Online' : 'Offline'}</span>
-        <img src={avatar} alt={name} width="48" />
-        <p>{name}</p>
+    <ul className={styles.listFriends}>
+      <li className={styles.item}>
+        <span className={isOnline ? styles.online : styles.offline}>
+          {/* {isOnline ? 'Online' : 'Offline'} */}
+        </span>
+        {/* <span className={styles.status}>{status ? 'Online' : 'Offline'}</span> */}
+        <img className={styles.avatar} src={avatar} alt={name} width="48" />
+        <p className={styles.name}>{name}</p>
       </li>
     </ul>
   );
 }
 
 FriendList.propTypes = {
-  status: PropTypes.bool.isRequired,
+  isOnline: PropTypes.bool.isRequired,
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
